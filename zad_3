@@ -1,0 +1,37 @@
+#include <iostream>
+
+
+using namespace std;
+
+int main()
+{
+    float mass, height;
+
+    cout << "Podaj mase ciala (kg): ";
+    cin >> mass;
+    cout << "Podaj wysokosc (m): ";
+    cin >> height;
+
+    float BMI_index = mass/(height*height);
+
+    if(BMI_index < 16)
+        cout << "Wskaznik BMI wynosi " << BMI_index << " - wyglodzenie.\n";
+    else if(BMI_index > 16 && BMI_index < 16.99)
+        cout << "Wskaznik BMI wynosi " << BMI_index << " - wychudzenie.\n";
+    else if(BMI_index > 17 && BMI_index < 18.49)
+        cout << "Wskaznik BMI wynosi " << BMI_index << " - niedowaga.\n";
+    else if(BMI_index > 18.5 && BMI_index < 24.99)
+        cout << "Wskaznik BMI wynosi " << BMI_index << " - wartosc prawidlowa.\n";
+    else if(BMI_index > 25 && BMI_index < 29.99)
+        cout << "Wskaznik BMI wynosi " << BMI_index << " - nadwaga.\n";
+    else if(BMI_index > 30 && BMI_index < 34.99)
+        cout << "Wskaznik BMI wynosi " << BMI_index << " - I stopien otylosci.\n";
+    else if(BMI_index > 35 && BMI_index < 39.99)
+        cout << "Wskaznik BMI wynosi " << BMI_index << " - II stopien otylosci.\n";
+    else
+        cout << "Wskaznik BMI wynosi " << BMI_index << " - otylosc skrajna.\n";
+    
+
+    system("pause");
+    return 0;
+}
