@@ -1,0 +1,28 @@
+#include <string>
+#include <iostream>
+
+
+using namespace std;
+
+int main()
+{
+    string text;
+
+    cout << "Podaj napis: ";
+    cin >> text;
+    
+    int length = text.size();
+    int counter = 0;
+
+    for(int i = 0; i <= length/2 - 1; i++)
+        if(text[i] == text[length - i - 1])
+            counter++;
+
+    if(counter == length/2)
+        cout << "To palindrom.\n";
+    else
+        cout << "To nie palindrom.\n";
+    
+    system("pause");
+    return 0;
+}
