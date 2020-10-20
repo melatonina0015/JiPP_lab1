@@ -1,0 +1,51 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a, counter_1 = 1, b, counter_2 = 1;
+    cout << "Podaj pierwsza liczbe: ";
+    cin >> a;
+    cout << "Podaj druga liczbe: ";
+    cin >> b;
+
+    for(int i = 2; i * i <= a; i++)
+    {
+        if (a % i == 0)
+        {
+            if(i * i != a)
+            {
+                counter_1 += i;
+                counter_1 += a/i;
+            }
+            else
+                counter_1 += i;
+        }
+    }
+     for(int i = 2; i * i <= b; i++)
+    {
+        if (b % i == 0)
+        {
+            if(i * i != b)
+            {
+                counter_2 += i;
+                counter_2 += b/i;
+            }
+            else
+                counter_2 += i;
+        }
+    }
+
+    cout << counter_1 << endl;
+    cout << counter_2 << endl;
+
+    if((counter_1 - 1) == b && (counter_2 - 1) == a)
+        cout << "Liczby skojarzone.\n";
+    else
+        cout << "Liczby nie sa skojrzone.\n";
+    
+
+    system("pause");
+    return 0;
+}
