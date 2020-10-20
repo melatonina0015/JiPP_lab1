@@ -1,0 +1,30 @@
+#include <iostream>
+#include <algorithm>
+#include <vector>
+
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+    cout << "Liczba argumentow " << argc << endl;
+    cout << "Nazwa programu " << argv[0] << endl;
+
+    vector<int> nums;
+
+    for(int i = 1; i < argc; i++)
+    {
+        int a = atoi(argv[i]);
+        nums.push_back(a);
+    }
+
+    sort(nums.begin(), nums.end());
+
+    for(int i = 0; i < argc - 1 ; i++)
+    {
+        cout << nums[i] << " ";
+    }
+    cout << endl;
+
+    system("pause");
+    return 0;
+}
